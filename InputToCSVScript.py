@@ -36,16 +36,13 @@ def main():
                     print(my_list[2])
                     print(my_list[3])
                     # number of submitted
-                    hospitalOrganizer[pointer][1] = hospitalOrganizer[pointer][1] + my_list[1]
+                    hospitalOrganizer[pointer][1] = my_list[1]
                     # number of good hit
-                    hospitalOrganizer[pointer][3] = hospitalOrganizer[pointer][2] + my_list[2]
+                    hospitalOrganizer[pointer][2] = str(int(hospitalOrganizer[pointer][2]) + int(my_list[2]))
                     # number of no hit
-                    hospitalOrganizer[pointer][3] = hospitalOrganizer[pointer][3] + my_list[3]
+                    hospitalOrganizer[pointer][3] = str(int(hospitalOrganizer[pointer][3]) + int(my_list[3]))
                     File_object = open("testOutput.txt", "w")
-                    #TODO remove trailing comma because it makes an empty entry
                     for i in hospitalOrganizer:
-                        #i = map(lambda v: v + ',', i)
-                        #File_object.writelines(i)
                         my_string = ','.join(map(str, i))
                         File_object.writelines(my_string)
                         File_object.write('\n')
@@ -55,8 +52,6 @@ def main():
                     hospitalOrganizer.append(my_list)
                     File_object = open("testOutput.txt", "w")
                     for i in hospitalOrganizer:
-                        #i = map(lambda v: v + ',', i)
-                        #File_object.writelines(i)
                         my_string = ','.join(map(str, i))
                         File_object.writelines(my_string)
                         File_object.write('\n')
