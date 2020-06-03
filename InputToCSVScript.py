@@ -44,8 +44,10 @@ def main():
                     File_object = open("testOutput.txt", "w")
                     #TODO remove trailing comma because it makes an empty entry
                     for i in hospitalOrganizer:
-                        i = map(lambda v: v + ',', i)
-                        File_object.writelines(i)
+                        #i = map(lambda v: v + ',', i)
+                        #File_object.writelines(i)
+                        my_string = ','.join(map(str, i))
+                        File_object.writelines(my_string)
                         File_object.write('\n')
                     File_object.close()
                     shutil.copyfile("testOutput.txt", "testBackup.txt")
@@ -53,8 +55,10 @@ def main():
                     hospitalOrganizer.append(my_list)
                     File_object = open("testOutput.txt", "w")
                     for i in hospitalOrganizer:
-                        i = map(lambda v: v + ',', i)
-                        File_object.writelines(i)
+                        #i = map(lambda v: v + ',', i)
+                        #File_object.writelines(i)
+                        my_string = ','.join(map(str, i))
+                        File_object.writelines(my_string)
                         File_object.write('\n')
                     File_object.close()
                     shutil.copyfile("testOutput.txt", "testBackup.txt")
