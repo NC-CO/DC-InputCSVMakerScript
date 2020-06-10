@@ -28,13 +28,6 @@ def main():
                         pointer = count
                     count += 1
                 if exists:
-                    print(hospitalOrganizer[pointer][0])
-                    print(hospitalOrganizer[pointer][1])
-                    print(hospitalOrganizer[pointer][2])
-                    print(hospitalOrganizer[pointer][3])
-                    print(my_list[1])
-                    print(my_list[2])
-                    print(my_list[3])
                     # number of submitted
                     hospitalOrganizer[pointer][1] = my_list[1]
                     # number of good hit
